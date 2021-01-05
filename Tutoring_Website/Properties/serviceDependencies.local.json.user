@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "restored": true,
+      "restoreTime": "2020-12-30T22:30:22.6225817Z"
+    },
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2020-12-30T22:30:38.8981458Z"
+    }
+  },
+  "parameters": {
+    "mssql1.subscriptionId": {
+      "Type": "subscription",
+      "Value": "83d4718a-2761-456f-8959-9cbc8828e18b"
+    },
+    "mssql1.resourceGroupName": {
+      "Type": "resourceGroup",
+      "Value": "Tutoring"
+    }
+  }
+}

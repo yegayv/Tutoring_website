@@ -1,0 +1,121 @@
+﻿@page
+@model Tutoring_Website.Pages.Tutors.IndexModel
+
+
+<br />
+<div class="container row p-0 m-0">
+    <div class="col-9">
+        <h2 class="text-info">Tutor List</h2>
+    </div>
+    <div class="col-3">
+        <a asp-page="Create" class="btn btn-info form-control text-white">Create New Book</a>
+    </div>
+
+    <h2>@Model.json</h2>
+
+    <div class="col-12 border p-3 mt-3">
+        <form method="post">
+            @if (Model.Tutors.Count() > 0)
+            {
+                <table class="table table-stripes border">
+                    <tr class="table-secondary">
+                        <th>
+                            <label asp-for="Tutors.FirstOrDefault().tutor_name"></label>
+                        </th>
+                        <th>
+                            @*Html.DisplayNameFor(m=>m.Books.FirstOrDefault().Author)*@
+                            <label asp-for="Tutors.FirstOrDefault().tutor_subjects"></label>
+                        </th>
+                        <th>
+                            <label asp-for="Tutors.FirstOrDefault().tutor_description"></label>
+                        </th>
+                        <th>
+                            <label asp-for="Tutors.FirstOrDefault().tutor_rate"></label>
+                        </th>
+                        <th>
+                            <label asp-for="Tutors.FirstOrDefault().tutor_img"></label>
+                        </th>
+                        <th>
+                            <label asp-for="Tutors.FirstOrDefault().tutor_rating"></label>
+                        </th>
+                        <th>
+                            <label asp-for="Tutors.FirstOrDefault().tutor_date_joined"></label>
+                        </th>
+                    </tr>
+                    @foreach (var item in Model.Tutors)
+                    {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(m => item.tutor_name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(m => item.tutor_subjects)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(m => item.tutor_description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(m => item.tutor_rate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(m => item.tutor_img)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(m => item.tutor_rating)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(m => item.tutor_date_joined)
+                    </td>
+                    <td>
+                        <button asp-page-handler="Delete" asp-route-id="@item.tutor_id" onclick="return confirm('Are you sure?')" class="btn btn-danger btn-sm">Delete</button>
+                        <a asp-page="Edit" asp-route-id="@item.tutor_id" class="btn btn-success btn-sm text-white">Edit</a>
+                    </td>
+                </tr>
+                    }
+                </table>
+            }
+            else
+            {
+                <p>No books available!</p>
+            }
+
+        </form>
+    </div>
+
+    <div class="col-12" stule="text-align:center">
+        <br />
+        <span class="h3 text-info">Tutors from projectRainForest</span>
+        <br /><br />
+    </div>
+    <div class="col-12 border p-3">
+        <table class="table table-stripes border">
+            <tr class="table-secondary">
+                <th>
+                    <label asp-for="TutorList.FirstOrDefault().tutor_name"></label>
+                </th>
+                <th>
+                    <label asp-for="TutorList.FirstOrDefault().tutor_subjects"></label>
+                </th>
+                <th>
+                    <label asp-for="TutorList.FirstOrDefault().tutor_description"></label>
+                </th>
+                <th>
+                    <label asp-for="TutorList.FirstOrDefault().tutor_rate"></label>
+                </th>
+                <th>
+                    <label asp-for="TutorList.FirstOrDefault().tutor_img"></label>
+                </th>
+                <th>
+                    <label asp-for="TutorList.FirstOrDefault().tutor_rating"></label>
+                </th>
+                <th>
+                    <label asp-for="TutorList.FirstOrDefault().tutor_date_joined"></label>
+                </th>
+            </tr>
+           </table>
+        </div>
+</div>
+@section Scripts{
+    <script>
+    </script>
+}

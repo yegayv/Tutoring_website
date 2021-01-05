@@ -1,0 +1,88 @@
+﻿@page
+@model Tutoring_Website.Pages.Tutors.EditModel
+
+<br />
+<h2 class="text-info">Edit Book</h2>
+<br />
+
+<div class="border container" style="padding:30px;">
+    <form method="post">
+        <input type="hidden" asp-for="Tutor.tutor_id" />
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Tutor.tutor_name"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Tutor.tutor_name" class="form-control" />
+            </div>
+            <span asp-validation-for="Tutor.tutor_name" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Tutor.tutor_subjects"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Tutor.tutor_subjects" class="form-control" />
+            </div>
+            <span asp-validation-for="Tutor.tutor_subjects" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Tutor.tutor_description"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Tutor.tutor_description" class="form-control" />
+            </div>
+            <span asp-validation-for="Tutor.tutor_description" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Tutor.tutor_rate"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Tutor.tutor_rate" class="form-control" />
+            </div>
+            <span asp-validation-for="Tutor.tutor_rate" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Tutor.tutor_img"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Tutor.tutor_img" class="form-control" />
+            </div>
+            <span asp-validation-for="Tutor.tutor_img" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Tutor.tutor_rating"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Tutor.tutor_rating" class="form-control" />
+            </div>
+            <span asp-validation-for="Tutor.tutor_rating" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Tutor.tutor_date_joined"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Tutor.tutor_date_joined" class="form-control" />
+            </div>
+            <span asp-validation-for="Tutor.tutor_date_joined" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3 offset-3">
+                <input type="submit" value="Update" class="btn btn-primary form-control" />
+            </div>
+            <div class="col-3">
+                <a asp-page="Index" class="btn btn-success form-control">Back to List</a>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
