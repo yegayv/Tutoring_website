@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
-using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -51,11 +50,20 @@ namespace Tutoring_Website.Pages.Tutors
 
                 _logger.LogInformation("Test response:");
                var readContent = await response.Content.ReadAsStringAsync();
-               
-                var ProductInfo = JArray.Parse(readContent)["productInfo"];
-                var productString = JsonConvert.DeserializeObject(ProductInfo.ToString());
 
-            
+                var ProductList = JArray.Parse(readContent);
+
+                string jsonS = JsonConvert.SerializeObject(ProductList, Formatting.None);
+
+                Product product = JsonConvert.DeserializeObject<Product>(jsonS);
+                
+                var ProductArr = ProductList["productInfo"].Value<JArray>()[0];
+
+                List<ProductInfo> clients = ProductArr.ToObject<List<ProductInfo>>();
+
+                //var productString = JsonConvert.DeserializeObject(ProductList);
+                 
+
                 //var ProductList = (JObject)JsonConvert.DeserializeObject(readContent);
 
 

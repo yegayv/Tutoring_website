@@ -385,3 +385,6 @@ C:\Users\vadim\source\repos\Tutoring_Website\Tutoring_Website\obj\Release\netcor
 C:\Users\vadim\source\repos\Tutoring_Website\Tutoring_Website\obj\Release\netcoreapp3.1\Razor\Pages\Tutors\Edit.cshtml.g.cs
 C:\Users\vadim\source\repos\Tutoring_Website\Tutoring_Website\obj\Release\netcoreapp3.1\Razor\Pages\Tutors\Index.cshtml.g.cs
 C:\Users\vadim\source\repos\Tutoring_Website\Tutoring_Website\bin\Release\netcoreapp3.1\libman.json
+C:\Users\vadim\source\repos\Tutoring_Website\Tutoring_Website\obj\Release\netcoreapp3.1\Tutoring_Website.csproj.CoreCompileInputs.cache
+C:\Users\vadim\source\repos\Tutoring_Website\Tutoring_Website\obj\Release\netcoreapp3.1\Tutoring_Website.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\vadim\source\repos\Tutoring_Website\Tutoring_Website\obj\Release\netcoreapp3.1\Tutoring_Website.MvcApplicationPartsAssemblyInfo.cache

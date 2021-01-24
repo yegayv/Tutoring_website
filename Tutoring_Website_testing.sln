@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutoring_Website", "Tutoring_Website\Tutoring_Website.csproj", "{A6B1F743-6EEF-4511-896C-5899D359A7EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutoring_Website", "..\..\..\Desktop\Tutoring_website_main\Tutoring_website-master\Tutoring_Website\Tutoring_Website.csproj", "{A6B1F743-6EEF-4511-896C-5899D359A7EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
